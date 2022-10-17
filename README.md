@@ -19,7 +19,7 @@ Node.js и следующие пакеты:
 - npm install moment (Для работы с датой (необходима для извлечения номера дня недели из даты))
 - npm install sqlite3-transactions
 - npm install passport
-- npm install passport-local (Для использования локальной стратегии аутентификации необходимо установить модуль passport-local при помощи команды)
+- npm install passport-local (Для использования локальной стратегии аутентификации необходимо установить модуль passport-local)
 - npm install express-session 
 - npm install connect-flash
 - npm install bcrypt
