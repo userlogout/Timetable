@@ -1,0 +1,7 @@
+extends ../head
+block content
+    a(href="/addDiscipline" class="btn btn-outline-success") Добавить курс
+    ul(class="list-group mt-3")
+    each el in disciplines
+        li(class="list-group-item")
+            a(href="/discipline/" + el.id) #{el.name}

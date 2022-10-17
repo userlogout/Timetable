@@ -1,0 +1,8 @@
+extends ../head
+block content
+    div(class="col-md-5")
+        form(action="/addTeacher" method="POST")
+            div(class="form-group mb-3")
+                input(name="name" type="text" placeholder="ФИО преподавателя" required class="form-control")
+            div(class="form-group mb-3")
+                input(type="submit" value="Добавить" class="btn btn-outline-success")

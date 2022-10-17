@@ -1,0 +1,19 @@
+extends ../head
+block content
+    div(class="col-md-5")
+        form(action="/updateStudent/" + student.id, method="POST")
+            div(class="form-group mb-3")
+                input(name="name" type="text" placeholder="ФИО студента" value=student.name required class="form-control")
+            div(class="form-group mb-3")
+                select(name="student_group_id" class="form-select")
+                    each el in studentGroups
+                        if(student.student_group_id == el.id)
+                            // подставляем по умолчанию значение той группы, к которой уже прикреплён студент
+                            option(value=el.id selected) #{el.number}
+                        else
+                            option(value=el.id) #{el.number}
+            div(class="form-group mb-3")
+                input(type="submit" value="Обновить" class="btn btn-outline-success")
+        form(action="/deleteStudent/" + student.id, method="POST")
+            div(class="form-group mb-3")
+                input(type="submit" value="Удалить" class="btn btn-danger")

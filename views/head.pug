@@ -1,0 +1,26 @@
+html
+    head
+    meta(charset='utf-8')
+    title #{title}
+    block scripts
+        script(src="/js/jquery-3.6.1.min.js")
+        script(src="/bootstrap/js/bootstrap.js")
+    block styles
+        link(rel="stylesheet" href="/bootstrap/css/bootstrap.css")
+    body
+        nav(class="navbar navbar-light px-4" style="background-color: #E6E6FA;")
+            if username
+                div #{username}
+                a(href="/logout" class="navbar-brand") Выйти
+            else
+                a(href="/login" class="navbar-brand") Войти
+            a(href="/listStudentGroups" class="navbar-brand") Студенческие группы
+            a(href="/listStudents" class="navbar-brand") Студенты
+            a(href="/listTeachers" class="navbar-brand") Преподаватели
+            a(href="/listDisciplines" class="navbar-brand") Учебные дисциплины
+            a(href="/listDisciplineTeacher" class="navbar-brand") Учебные дисциплины преподавателей
+            a(href="/schedule" class="navbar-brand") Расписание занятий
+            a(href="/attendanceJournal" class="navbar-brand") Журнал посещаемости
+        br
+    div(class="container-md mt-3")
+        block content

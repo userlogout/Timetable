@@ -1,0 +1,14 @@
+extends ../head
+block content
+    div(class="col-md-5")
+        form(action="/addDisciplineTeacher" method="POST")
+            div(class="form-group mb-3")
+                select(name="discipline_id" class="form-select")
+                    each el in disciplines
+                        option(value=el.id) #{el.name}
+            div(class="form-group mb-3")
+                select(name="teacher_id" class="form-select")
+                    each el in teachers
+                        option(value=el.id) #{el.name}
+            div(class="form-group mb-3")
+                    input(type="submit" value="Добавить" class="btn btn-outline-info")

@@ -1,0 +1,11 @@
+extends ../head
+block content
+    div(class="col-md-5")
+        form(action="/updateStudentGroup/" + studentGroup.id, method="POST")
+            div(class="form-group mb-3")
+                input(name="number" type="text" placeholder="Наименование группы" value=studentGroup.number required class="form-control")
+            div(class="form-group mb-3")
+                input(type="submit" value="Обновить" class="btn btn-success")
+        form(action="/deleteStudentGroup/" + studentGroup.id, method="POST")
+            div(class="form-group mb-3")
+                input(type="submit" value="Удалить" class="btn btn-danger")

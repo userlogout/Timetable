@@ -1,0 +1,10 @@
+extends ../head
+block content
+    // col-md-5 - ширина колонки
+    // ссылка на страницу для добавления студенческой группы
+    a(href="/addStudentGroup" class="btn btn-outline-success") Добавить студенческую группу
+    ul(class="list-group mt-3")
+    each el in studentGroups
+        li(class="list-group-item")
+            // ссылка на страницу для просмотра и изменения данных студенческой группы
+            a(href="/studentGroup/" + el.id class="btn btn-outline-info") #{el.number}

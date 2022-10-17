@@ -1,0 +1,16 @@
+extends ../head
+block append scripts
+    // подключаем скрипт
+    script(src="/js/scriptAddAttendance.js")
+block content
+    div(class="col-md-5")
+        form(action="/addAttendanceMark", method="POST")
+            div(class="form-group mb-3")
+                select(name="student_group_id" id="student_group_id" class="form-select")
+                    each el in studentGroups
+                        option(value=el.id) #{el.number}
+            div(class="form-group mb-3")
+                input(name="date_pair" id="date_pair" type="date" placeholder="Дата занятий" required class="form-control")
+            div(class="form-group mb-3")
+                div(id="attendance_table_id")
+                input(type="submit" value="Добавить" class="btn btn-outline-success")

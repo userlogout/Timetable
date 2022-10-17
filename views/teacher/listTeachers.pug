@@ -1,0 +1,7 @@
+extends ../head
+block content
+    a(href="/addTeacher" class="btn btn-outline-success") Добавить преподавателя
+    ul(class="list-group mt-3")
+    each el in teachers
+        li(class="list-group-item")
+            a(href="/teacher/" + el.id class="btn btn-outline-info") #{el.name}

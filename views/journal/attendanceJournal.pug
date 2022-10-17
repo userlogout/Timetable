@@ -1,0 +1,15 @@
+extends ../head
+block append scripts
+    // подключаем скрипт
+    script(src="/js/scriptAttendanceJournal.js")
+block content
+    div(class="col-md-5")
+        div(class="form-group mb-3")
+            a(href="/addAttendanceMark" class="btn btn-outline-success") Добавить отметки посещаемости
+        div(class="form-group mb-3")
+            select(name="student_group_id" id="student_group_id" class="form-select")
+                each el in studentGroups
+                    option(value=el.id) #{el.number}
+        div(class="form-group mb-3")
+            input(name="date_pair" id="date_pair" type="date" placeholder="Дата занятий" required class="form-control")
+            div(id="attendance_table_id")

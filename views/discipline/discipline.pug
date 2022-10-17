@@ -1,0 +1,11 @@
+extends ../head
+block content
+    div(class="col-md-5")
+        form(action="/updateDiscipline/" + discipline.id, method="POST")
+            div(class="form-group mb-3")
+                input(name="name" type="text" placeholder="Название курса" value=discipline.name required class="form-control")
+            div(class="form-group mb-3")
+                input(type="submit" value="Обновить" class="btn btn-outline-success")
+        form(action="/deleteDiscipline/" + discipline.id, method="POST")
+            div(class="form-group mb-3")
+                input(type="submit" value="Удалить" class="btn btn-danger")

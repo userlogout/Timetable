@@ -1,0 +1,8 @@
+extends ../head
+block content
+    div(class="col-md-5")
+        form(action="/addDiscipline" method="POST")
+            div(class="form-group mb-3")
+                input(name="name" type="text" placeholder="Название предмета" required class="form-control")
+            div(class="form-group mb-3")
+                input(type="submit" value="Добавить" class="btn btn-outline-success")

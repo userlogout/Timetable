@@ -1,0 +1,9 @@
+extends ../head
+block content
+    // col-md-5 - ширина колонки
+    div(class="col-md-5")
+        form(action="/addStudentGroup" method="POST")
+            div(class="form-group mb-3")
+                input(name="number" type="text" placeholder="Номер группы" required class="form-control")
+            div(class="form-group mb-3")
+                input(type="submit" value="Добавить" class="btn btn-outline-success")
